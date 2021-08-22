@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<h1> Tweet your password! </h1>
+
+<p>(but seriously don't)</p>
+</head>
+
+<body>
+
+<h2>Cool passwords!</h2>
+
+	{% for obj in tweets10 %}
+	{{ obj.content|safe }}
+	</br>
+	</br>
+	{% endfor %}
+
+<form action="/post_tweet/" method="post">
+	{% csrf_token %}
+	{{ form }}
+	<input type="submit" name="Submit">
+</form>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'cc_mooc_proj1/style.css' %}">
+    {% endblock %}
+
+    <title>{% block title %}Welcome to the Internet!{% endblock %}</title>
+</head>
+
+<body>
+  <header>
+    {% block header %}
+    <h1>Welcome to the Internet!</h1>
+        
+    <hr>
+    {% endblock %}
+  </header>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+  <footer>
+      {% block footer %}
+        <hr>
+<pre>
+    .-.  _
+    | | / )
+    | |/ /
+   _|__ /_
+  / __)-' )
+   \  `(.-')
+    > ._>-'
+   / \/
+</pre>
+      {% endblock %}
+  </footer>
+</body>
+</html>

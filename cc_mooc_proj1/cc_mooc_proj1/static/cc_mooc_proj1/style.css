@@ -1,0 +1,17 @@
+header {
+  text-align: center;
+  height : 60px;
+}
+header p {
+  text-align: right;
+}
+div {
+  min-height : 300px;
+}
+footer {
+  bottom : 0;
+  height : 60px;
+  margin-top : 40px;
+  text-align: left ;
+  font-size: 30px ;
+}

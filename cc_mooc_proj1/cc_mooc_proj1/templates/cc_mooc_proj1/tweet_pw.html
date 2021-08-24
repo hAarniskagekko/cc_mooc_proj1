@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+{% extends "cc_mooc_proj1/base.html" %}
 
-<h1> Tweet your password! </h1>
+{% block content %}
 
+<h2> Tweet your password! </h2>
 <p>(but seriously don't)</p>
-</head>
-
-<body>
 
 <h2>Cool passwords!</h2>
 
@@ -22,5 +18,5 @@
 	{{ form }}
 	<input type="submit" name="Submit">
 </form>
-</body>
-</html>
+
+{% endblock %}

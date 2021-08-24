@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from random import randrange
 from .forms import TweetPwForm
 from .models import Tweet
 
@@ -22,3 +23,10 @@ def post_tweet(request):
 
 	form = TweetPwForm()
 	return redirect('tweet_passwd')
+
+def secret_of_the_day(request):
+	idioms = ["Fish spawn in quiet waters", "It's more fun to look into the mouth of a laughing one than crying one", "Rakes and pitchforks are peasants tools; books and cards area badges of bliss"]
+	rand_number = randrange(3)
+	select_idiom = idioms[rand_number]
+
+	return render(request, 'cc_mooc_proj1/secret_of_the_day.html', {'idiom' : select_idiom})
